@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://callusz.github.io/"/>
-  <updated>2016-07-27T17:13:42.609Z</updated>
+  <updated>2016-09-29T15:59:16.312Z</updated>
   <id>http://callusz.github.io/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello_kuiper</title>
+    <link href="http://callusz.github.io/2016/09/29/hello-kuiper/"/>
+    <id>http://callusz.github.io/2016/09/29/hello-kuiper/</id>
+    <published>2016-09-29T15:59:16.000Z</published>
+    <updated>2016-09-29T15:59:16.312Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>coding1</title>
