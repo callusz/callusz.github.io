@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://callusz.github.io/"/>
-  <updated>2016-10-01T06:18:26.328Z</updated>
+  <updated>2016-10-01T06:22:59.250Z</updated>
   <id>http://callusz.github.io/</id>
   
   <author>
@@ -16,14 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>x86 cpu registers</title>
+    <title>x86架构寄存器知识</title>
     <link href="http://callusz.github.io/2016/10/01/x86-cpu-registers/"/>
     <id>http://callusz.github.io/2016/10/01/x86-cpu-registers/</id>
     <published>2016-09-30T16:26:43.000Z</published>
-    <updated>2016-10-01T06:18:26.328Z</updated>
+    <updated>2016-10-01T06:22:59.250Z</updated>
     
-    <content type="html"><![CDATA[<p>摘要:<br><a id="more"></a><br>正文:</p>
-<h1 id="x86架构寄存器知识"><a href="#x86架构寄存器知识" class="headerlink" title="x86架构寄存器知识"></a>x86架构寄存器知识</h1><h2 id="x86-32bit-cpu寄存器"><a href="#x86-32bit-cpu寄存器" class="headerlink" title="x86 32bit cpu寄存器"></a>x86 32bit cpu寄存器</h2><p>4个数据寄存器(EAX、EBX、ECX和EDX)<br>2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)<br>6个段寄存器(ES、CS、SS、DS、FS和GS)<br>1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)<br>例如：<br><img src="G:\学习\硬件知识\cpu知识\x86_32bit_registers.png" alt="image">  </p>
+    <content type="html"><![CDATA[<h2 id="x86-32bit-cpu寄存器"><a href="#x86-32bit-cpu寄存器" class="headerlink" title="x86 32bit cpu寄存器"></a>x86 32bit cpu寄存器</h2><p>4个数据寄存器(EAX、EBX、ECX和EDX)<br>2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)<br>6个段寄存器(ES、CS、SS、DS、FS和GS)<br>1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)<br>例如：<br><img src="G:\学习\硬件知识\cpu知识\x86_32bit_registers.png" alt="image">  </p>
 <h2 id="1、数据寄存器"><a href="#1、数据寄存器" class="headerlink" title="1、数据寄存器"></a>1、数据寄存器</h2><p>数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。  </p>
 <p>32位CPU有4个32位的通用寄存器EAX、EBX、ECX和EDX。对低16位数据的存取，不会影响高16位的数据。这些低16位寄存器分别命名为：AX、BX、CX和DX，它和先前的CPU中的寄存器相一致。  </p>
 <p>4个16位寄存器又可分割成8个独立的8位寄存器(AX：AH-AL、BX：BH-BL、CX：CH-CL、DX：DH-DL)，每个寄存器都有自己的名称，可独立存取。程序员可利用数据寄存器的这种“可分可合”的特性，灵活地处理字/字节的信息。  </p>
@@ -81,7 +80,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;摘要:&lt;br&gt;
+      &lt;h2 id=&quot;x86-32bit-cpu寄存器&quot;&gt;&lt;a href=&quot;#x86-32bit-cpu寄存器&quot; class=&quot;headerlink&quot; title=&quot;x86 32bit cpu寄存器&quot;&gt;&lt;/a&gt;x86 32bit cpu寄存器&lt;/h2&gt;&lt;p&gt;4个数据寄存器(EAX、EB
     
     </summary>
     

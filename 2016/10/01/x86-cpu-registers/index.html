@@ -86,18 +86,24 @@
 
 
 
-<meta name="description" content="摘要:">
+<meta name="description" content="x86 32bit cpu寄存器4个数据寄存器(EAX、EBX、ECX和EDX)2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)6个段寄存器(ES、CS、SS、DS、FS和GS)1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)例如：  
+1、数据寄存器数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。  
+32位CP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="x86 cpu registers">
+<meta property="og:title" content="x86架构寄存器知识">
 <meta property="og:url" content="http://callusz.github.io/2016/10/01/x86-cpu-registers/index.html">
 <meta property="og:site_name" content="曲折的光">
-<meta property="og:description" content="摘要:">
+<meta property="og:description" content="x86 32bit cpu寄存器4个数据寄存器(EAX、EBX、ECX和EDX)2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)6个段寄存器(ES、CS、SS、DS、FS和GS)1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)例如：  
+1、数据寄存器数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。  
+32位CP">
 <meta property="og:image" content="http://callusz.github.io/G:\学习\硬件知识\cpu知识\x86_32bit_registers.png">
 <meta property="og:image" content="http://callusz.github.io/G:\学习\硬件知识\cpu知识\x86-64寄存器2.png">
-<meta property="og:updated_time" content="2016-10-01T06:18:26.328Z">
+<meta property="og:updated_time" content="2016-10-01T06:22:59.250Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="x86 cpu registers">
-<meta name="twitter:description" content="摘要:">
+<meta name="twitter:title" content="x86架构寄存器知识">
+<meta name="twitter:description" content="x86 32bit cpu寄存器4个数据寄存器(EAX、EBX、ECX和EDX)2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)6个段寄存器(ES、CS、SS、DS、FS和GS)1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)例如：  
+1、数据寄存器数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。  
+32位CP">
 <meta name="twitter:image" content="http://callusz.github.io/G:\学习\硬件知识\cpu知识\x86_32bit_registers.png">
 
 
@@ -121,7 +127,7 @@
 
   <link rel="canonical" href="http://callusz.github.io/2016/10/01/x86-cpu-registers/"/>
 
-  <title> x86 cpu registers | 曲折的光 </title>
+  <title> x86架构寄存器知识 | 曲折的光 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +277,7 @@
             
             
               
-                x86 cpu registers
+                x86架构寄存器知识
               
             
           </h1>
@@ -330,8 +336,7 @@
       
 
       
-        <p>摘要:<br><a id="more"></a><br>正文:</p>
-<h1 id="x86架构寄存器知识"><a href="#x86架构寄存器知识" class="headerlink" title="x86架构寄存器知识"></a>x86架构寄存器知识</h1><h2 id="x86-32bit-cpu寄存器"><a href="#x86-32bit-cpu寄存器" class="headerlink" title="x86 32bit cpu寄存器"></a>x86 32bit cpu寄存器</h2><p>4个数据寄存器(EAX、EBX、ECX和EDX)<br>2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)<br>6个段寄存器(ES、CS、SS、DS、FS和GS)<br>1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)<br>例如：<br><img src="G:\学习\硬件知识\cpu知识\x86_32bit_registers.png" alt="image">  </p>
+        <h2 id="x86-32bit-cpu寄存器"><a href="#x86-32bit-cpu寄存器" class="headerlink" title="x86 32bit cpu寄存器"></a>x86 32bit cpu寄存器</h2><p>4个数据寄存器(EAX、EBX、ECX和EDX)<br>2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)<br>6个段寄存器(ES、CS、SS、DS、FS和GS)<br>1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)<br>例如：<br><img src="G:\学习\硬件知识\cpu知识\x86_32bit_registers.png" alt="image">  </p>
 <h2 id="1、数据寄存器"><a href="#1、数据寄存器" class="headerlink" title="1、数据寄存器"></a>1、数据寄存器</h2><p>数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。  </p>
 <p>32位CPU有4个32位的通用寄存器EAX、EBX、ECX和EDX。对低16位数据的存取，不会影响高16位的数据。这些低16位寄存器分别命名为：AX、BX、CX和DX，它和先前的CPU中的寄存器相一致。  </p>
 <p>4个16位寄存器又可分割成8个独立的8位寄存器(AX：AH-AL、BX：BH-BL、CX：CH-CL、DX：DH-DL)，每个寄存器都有自己的名称，可独立存取。程序员可利用数据寄存器的这种“可分可合”的特性，灵活地处理字/字节的信息。  </p>
@@ -543,7 +548,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#x86架构寄存器知识"><span class="nav-text">x86架构寄存器知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#x86-32bit-cpu寄存器"><span class="nav-text">x86 32bit cpu寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、数据寄存器"><span class="nav-text">1、数据寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、变址寄存器"><span class="nav-text">2、变址寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、指针寄存器"><span class="nav-text">3、指针寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、段寄存器"><span class="nav-text">4、段寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、指令指针寄存器"><span class="nav-text">5、指令指针寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、标志寄存器"><span class="nav-text">6、标志寄存器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#x86-64bit-cpu-寄存器"><span class="nav-text">x86 64bit cpu 寄存器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#x86-32bit-cpu寄存器"><span class="nav-text">x86 32bit cpu寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、数据寄存器"><span class="nav-text">1、数据寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、变址寄存器"><span class="nav-text">2、变址寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、指针寄存器"><span class="nav-text">3、指针寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、段寄存器"><span class="nav-text">4、段寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、指令指针寄存器"><span class="nav-text">5、指令指针寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、标志寄存器"><span class="nav-text">6、标志寄存器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#x86-64bit-cpu-寄存器"><span class="nav-text">x86 64bit cpu 寄存器</span></a></div>
             
           </div>
         </section>
