@@ -7,7 +7,8 @@ title: 曲折的光
 subtitle: Linux技术分享
 description: 内核开发和DEBUG
 author: 老茧
-language: zh-Hans
+language: en
+#language: zh-Hans
 timezone:
 
 # URL
@@ -70,6 +71,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/callusz/callusz.github.io.git
+  repository: git@github.com:callusz/callusz.github.io.git
   branch: master
 
