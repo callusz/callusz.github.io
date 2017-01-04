@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://callusz.github.io/"/>
-  <updated>2017-01-04T13:56:14.500Z</updated>
+  <updated>2017-01-04T14:04:28.875Z</updated>
   <id>http://callusz.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://callusz.github.io/2017/01/04/git_command/"/>
+    <id>http://callusz.github.io/2017/01/04/git_command/</id>
+    <published>2017-01-04T14:04:28.875Z</published>
+    <updated>2017-01-04T14:04:28.875Z</updated>
+    
+    <content type="html"><![CDATA[<p>##GIT 命令缩写配置</p>
+<p>在.gitconfig中增加如下配置：<br>[alias]<br>    co = checkout<br>    ci = commit<br>    st = status<br>    pl = pull<br>    ps = push<br>    dt = difftool<br>    l = log –stat<br>    cp = cherry-pick<br>    ca = commit -a<br>    b = branch  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##GIT 命令缩写配置&lt;/p&gt;
+&lt;p&gt;在.gitconfig中增加如下配置：&lt;br&gt;[alias]&lt;br&gt;    co = checkout&lt;br&gt;    ci = commit&lt;br&gt;    st = status&lt;br&gt;    pl = pull&lt;br&gt;    ps 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>x86架构寄存器知识</title>
@@ -96,7 +117,7 @@
     <link href="http://callusz.github.io/2016/07/26/about-me/"/>
     <id>http://callusz.github.io/2016/07/26/about-me/</id>
     <published>2016-07-25T16:26:43.000Z</published>
-    <updated>2016-10-01T06:24:54.500Z</updated>
+    <updated>2017-01-04T14:06:32.234Z</updated>
     
     <content type="html"><![CDATA[<p>摘要:<br><a id="more"></a><br>正文:</p>
 ]]></content>
