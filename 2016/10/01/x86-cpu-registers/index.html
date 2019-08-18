@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="callus,">
 
 
 
@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="Linux内核开发和DEBUG">
-<meta name="keywords" content="kernel">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曲折的光">
-<meta property="og:url" content="https://kylozhang.github.io/index.html">
+<meta name="description" content="x86 32bit cpu寄存器4个数据寄存器(EAX、EBX、ECX和EDX)2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)6个段寄存器(ES、CS、SS、DS、FS和GS)1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)例如：   1、数据寄存器数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。   32位CP">
+<meta name="keywords" content="callus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="x86架构寄存器知识">
+<meta property="og:url" content="https://kylozhang.github.io/2016/10/01/x86-cpu-registers/index.html">
 <meta property="og:site_name" content="曲折的光">
-<meta property="og:description" content="Linux内核开发和DEBUG">
+<meta property="og:description" content="x86 32bit cpu寄存器4个数据寄存器(EAX、EBX、ECX和EDX)2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)6个段寄存器(ES、CS、SS、DS、FS和GS)1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)例如：   1、数据寄存器数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。   32位CP">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://kylozhang.github.io/img/x86_32bit_registers.png">
+<meta property="og:image" content="https://kylozhang.github.io/img/x86_64bit_registers.png">
+<meta property="og:updated_time" content="2019-08-18T11:22:47.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曲折的光">
-<meta name="twitter:description" content="Linux内核开发和DEBUG">
+<meta name="twitter:title" content="x86架构寄存器知识">
+<meta name="twitter:description" content="x86 32bit cpu寄存器4个数据寄存器(EAX、EBX、ECX和EDX)2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)6个段寄存器(ES、CS、SS、DS、FS和GS)1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)例如：   1、数据寄存器数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。   32位CP">
+<meta name="twitter:image" content="https://kylozhang.github.io/img/x86_32bit_registers.png">
 
 
 
@@ -119,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://kylozhang.github.io/">
+  <link rel="canonical" href="https://kylozhang.github.io/2016/10/01/x86-cpu-registers/">
 
 
 
 
 
-  <title>曲折的光</title>
+  <title>x86架构寄存器知识 | 曲折的光</title>
   
 
 
@@ -144,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,424 +221,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kylozhang.github.io/2019/08/18/programming/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="老茧">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曲折的光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/18/programming/" itemprop="url">什么是工程能力</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T19:22:47+08:00">
-                2019-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming/" itemprop="url" rel="index">
-                    <span itemprop="name">programming</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="什么是工程能力"><a href="#什么是工程能力" class="headerlink" title="什么是工程能力"></a>什么是工程能力</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kylozhang.github.io/2019/08/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="老茧">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曲折的光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/18/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T18:45:49+08:00">
-                2019-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kylozhang.github.io/2017/01/04/git_command/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="老茧">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曲折的光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/04/git_command/" itemprop="url">GIT命令缩写配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-04T22:15:00+08:00">
-                2017-01-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming/" itemprop="url" rel="index">
-                    <span itemprop="name">programming</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="GIT命令缩写配置"><a href="#GIT命令缩写配置" class="headerlink" title="GIT命令缩写配置"></a>GIT命令缩写配置</h1><p>在.gitconfig中增加如下配置：<br>[alias]<br>    co = checkout<br>    ci = commit<br>    st = status<br>    pl = pull<br>    ps = push<br>    dt = difftool<br>    l = log –stat<br>    cp = cherry-pick<br>    ca = commit -a<br>    b = branch  </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -665,9 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/01/x86-cpu-registers/" itemprop="url">x86架构寄存器知识</a></h1>
+          <h1 class="post-title" itemprop="name headline">x86架构寄存器知识</h1>
         
 
         <div class="post-meta">
@@ -739,9 +325,7 @@
       
 
       
-        
-          
-            <h1 id="x86-32bit-cpu寄存器"><a href="#x86-32bit-cpu寄存器" class="headerlink" title="x86 32bit cpu寄存器"></a>x86 32bit cpu寄存器</h1><p>4个数据寄存器(EAX、EBX、ECX和EDX)<br>2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)<br>6个段寄存器(ES、CS、SS、DS、FS和GS)<br>1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)<br>例如：<br><img src="/img/x86_32bit_registers.png" alt="Alt text">  </p>
+        <h1 id="x86-32bit-cpu寄存器"><a href="#x86-32bit-cpu寄存器" class="headerlink" title="x86 32bit cpu寄存器"></a>x86 32bit cpu寄存器</h1><p>4个数据寄存器(EAX、EBX、ECX和EDX)<br>2个变址和指针寄存器(ESI和EDI) 2个指针寄存器(ESP和EBP)<br>6个段寄存器(ES、CS、SS、DS、FS和GS)<br>1个指令指针寄存器(EIP) 1个标志寄存器(EFlags)<br>例如：<br><img src="/img/x86_32bit_registers.png" alt="Alt text">  </p>
 <h2 id="1、数据寄存器"><a href="#1、数据寄存器" class="headerlink" title="1、数据寄存器"></a>1、数据寄存器</h2><p>数据寄存器主要用来保存操作数和运算结果等信息，从而节省读取操作数所需占用总线和访问存储器的时间。  </p>
 <p>32位CPU有4个32位的通用寄存器EAX、EBX、ECX和EDX。对低16位数据的存取，不会影响高16位的数据。这些低16位寄存器分别命名为：AX、BX、CX和DX，它和先前的CPU中的寄存器相一致。  </p>
 <p>4个16位寄存器又可分割成8个独立的8位寄存器(AX：AH-AL、BX：BH-BL、CX：CH-CL、DX：DH-DL)，每个寄存器都有自己的名称，可独立存取。程序员可利用数据寄存器的这种“可分可合”的特性，灵活地处理字/字节的信息。  </p>
@@ -796,8 +380,6 @@
 </blockquote>
 <h1 id="x86-64bit-cpu-寄存器"><a href="#x86-64bit-cpu-寄存器" class="headerlink" title="x86 64bit cpu 寄存器"></a>x86 64bit cpu 寄存器</h1><p>X86-64中，所有寄存器都是64位，相对32位的x86来说，标识符发生了变化，比如：从原来的%ebp变成了%rbp。为了向后兼容性，%ebp依然可以使用，不过指向了%rbp的低32位。<br>X86-64寄存器的变化，不仅体现在位数上，更加体现在寄存器数量上。新增加寄存器%r8到%r15。加上x86的原有8个，一共16个寄存器。<br>刚刚说到，寄存器集成在CPU上，存取速度比存储器快好几个数量级，寄存器多了，GCC就可以更多的使用寄存器，替换之前的存储器堆栈使用，从而大大提升性能。<br>让寄存器为己所用，就得了解它们的用途，这些用途都涉及函数调用，X86-64有16个64位寄存器，分别是：%rax，%rbx，%rcx，%rdx，%esi，%edi，%rbp，%rsp，%r8，%r9，%r10，%r11，%r12，%r13，%r14，%r15。其中：<br><strong>%rax</strong> 作为函数返回值使用。<br><strong>%rsp</strong> 栈指针寄存器，指向栈顶<br><strong>%rdi，%rsi，%rdx，%rcx，%r8，%r9</strong> 用作函数参数，依次对应第1参数，第2参数。。。<br><strong>%rbx，%rbp，%r12，%r13，%14，%15</strong> 用作数据存储，遵循被调用者使用规则，简单说就是随便用，调用子函数之前要备份它，以防他被修改<br><strong>%r10，%r11</strong>用作数据存储，遵循调用者使用规则，简单说就是使用之前要先保存原值<br><img src="/img/x86_64bit_registers.png" alt="Alt text"></p>
 
-          
-        
       
     </div>
     
@@ -812,160 +394,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kylozhang.github.io/2016/07/26/about-me/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="老茧">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曲折的光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/07/26/about-me/" itemprop="url">about me</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-26T00:26:43+08:00">
-                2016-07-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/about/" itemprop="url" rel="index">
-                    <span itemprop="name">about</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/callus/" rel="tag"># callus</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>摘要:</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/07/26/about-me/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/26/about-me/" rel="next" title="about me">
+                <i class="fa fa-chevron-left"></i> about me
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/04/git_command/" rel="prev" title="GIT命令缩写配置">
+                GIT命令缩写配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -975,10 +437,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -986,6 +449,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1006,8 +473,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1067,6 +543,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#x86-32bit-cpu寄存器"><span class="nav-number">1.</span> <span class="nav-text">x86 32bit cpu寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、数据寄存器"><span class="nav-number">1.1.</span> <span class="nav-text">1、数据寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、变址寄存器"><span class="nav-number">1.2.</span> <span class="nav-text">2、变址寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、指针寄存器"><span class="nav-number">1.3.</span> <span class="nav-text">3、指针寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、段寄存器"><span class="nav-number">1.4.</span> <span class="nav-text">4、段寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、指令指针寄存器"><span class="nav-number">1.5.</span> <span class="nav-text">5、指令指针寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、标志寄存器"><span class="nav-number">1.6.</span> <span class="nav-text">6、标志寄存器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#x86-64bit-cpu-寄存器"><span class="nav-number">2.</span> <span class="nav-text">x86 64bit cpu 寄存器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1200,6 +692,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
